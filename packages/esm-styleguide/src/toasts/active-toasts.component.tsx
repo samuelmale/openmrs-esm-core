@@ -3,9 +3,10 @@ import { toastsSubject } from "./toasts";
 import Toast from "./toast.component";
 
 export default function ActiveToasts() {
-  const [toasts, setToasts] = React.useState([]);
+  const [toasts, setToasts] = React.useState(new Array());
   const [toastsClosing, setToastsClosing] = React.useState([]);
   const closeToastRef = React.useRef();
+  // @ts-ignore
   closeToastRef.current = closeToast;
 
   React.useEffect(() => {
